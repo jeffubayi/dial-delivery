@@ -1,5 +1,10 @@
 import { Header } from "./Header";
 
 export function Footer() {
-  return <footer>&copy; {new Date().getFullYear()} Pete Davis</footer>;
+  const now = new Date();
+  return (
+    <footer>
+      {now.getDate()}  {now.toLocaleString("en-US", { month: "long" })} {now.getFullYear()}
+    </footer>
+  );
 }

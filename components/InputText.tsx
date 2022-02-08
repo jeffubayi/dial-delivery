@@ -7,23 +7,28 @@ type InputTextProps = {
   onChange?: any;
 };
 
-export function InputText(props: InputTextProps) {
+export function InputText({
+  id,
+  children,
+  required,
+  onChange,
+}: InputTextProps) {
   const textInputRef = useRef<HTMLInputElement>();
 
   function handleChange() {
-    props.onChange(textInputRef.current.value);
+    onChange(textInputRef.current.value);
   }
 
   return (
     <section>
-      <label htmlFor={props.id}>
-        {props.children} {!props.required && <small>optional</small>}
+      <label htmlFor={id}>
+        {children} {!required && <small>optional</small>}
       </label>
       <input
-        id={props.id}
-        name={props.id}
+        id={id}
+        name={id}
         type="text"
-        required={props.required}
+        required={required}
         ref={textInputRef}
         onChange={handleChange}
       />
