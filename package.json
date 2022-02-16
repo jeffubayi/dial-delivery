@@ -16,7 +16,9 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "formik": "^2.2.9",
     "next": "latest",
+    "next-pwa": "^5.4.4",
     "react": "latest",
     "react-dom": "latest"
   },
