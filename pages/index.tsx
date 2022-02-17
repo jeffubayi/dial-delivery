@@ -1,22 +1,22 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Link from "../src/Link";
-import ProTip from "../src/ProTip";
-import Copyright from "../src/Copyright";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { Button, LinearProgress, Link } from "@mui/material";
+import { Formik, Field, Form } from "formik";
+import { TextField, Select } from "formik-mui";
+import MenuItem from "@mui/material/MenuItem";
 
+interface Values {
+  password: string;
+  email: string;
+  age: string;
+}
 const Home: NextPage = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -48,13 +48,12 @@ const Home: NextPage = () => {
       />
       <Grid item xs={12} sm={8} md={4} component={Paper} elevation={6} square>
         <Paper
-
           sx={{
             my: 1,
             mx: 1,
-            mt:8,
-            p:8,
-            borderRadius:5,
+            mt: 8,
+            p: 8,
+            borderRadius: 5,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -64,59 +63,109 @@ const Home: NextPage = () => {
           <Typography component="h1" variant="h5" sx={{ mt: 5 }}>
             Sign In
           </Typography>
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 1 }}
+          <Formik
+            initialValues={{
+              email: "",
+              password: "",
+              age: "",
+            }}
+            validate={(values) => {
+              const errors: Partial<Values> = {};
+              if (!values.email) {
+                errors.email = "Required";
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+              ) {
+                errors.email = "Invalid email address";
+              }
+              return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                setSubmitting(false);
+                alert(JSON.stringify(values, null, 2));
+              }, 500);
+            }}
           >
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              component={Link}
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-              noLinkStyle
-              href="/home"
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2" color="secondary">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2"  color="secondary">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
+            {({ submitForm, isSubmitting }) => (
+              <Form>
+                <Field
+                  component={TextField}
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  placeholder="jane@acme.com"
+                  type="email"
+                  fullWidth
+                  autoFocus
+                  margin="normal"
+                  required
+                />
+                <Field
+                  component={TextField}
+                  id="password"
+                  label="Password"
+                  name="password"
+                  placeholder="password"
+                  type="password"
+                  fullWidth
+                  autoFocus
+                  margin="normal"
+                  required
+                />
+                <Grid lg={12}>
+                  <Field
+                    component={Select}
+                    sx={{ width: "100%" }}
+                    formHelperText={{ children: "How old are you?" }}
+                    id="age"
+                    name="age"
+                    labelId="age-simple"
+                    label="Age"
+                    validate={(age: number) =>
+                      !age
+                        ? "Please enter your age"
+                        : age < 18
+                        ? "You must be 21 or older"
+                        : undefined
+                    }
+                  >
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Field>
+                </Grid>
+                <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Remember me"
+                />
+                {isSubmitting && <LinearProgress />}
+                <br />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  sx={{ mt: 3, mb: 2 }}
+                  disabled={isSubmitting}
+                  onClick={submitForm}
+                >
+                  Sign In
+                </Button>
+                <Grid container>
+                  <Grid item xs>
+                    <Link href="#" variant="body2" color="secondary">
+                      Forgot password?
+                    </Link>
+                  </Grid>
+                  <Grid item>
+                    <Link href="#" variant="body2" color="secondary">
+                      {"Don't have an account? Sign Up"}
+                    </Link>
+                  </Grid>
+                </Grid>
+              </Form>
+            )}
+          </Formik>
         </Paper>
       </Grid>
     </Grid>
