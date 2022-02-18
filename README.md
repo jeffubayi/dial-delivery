@@ -41,13 +41,9 @@ To deploy this project run
 
 - This project uses a fake My JSON Server API for list products.
 
-If you want to register your own products, just clone this repository, modify and upload it to GitHub: https://github.com/DanielMafra/api.git
+If you want to register your own products, just clone this repository, modify and upload it to GitHub.
 
 After that, just follow the instructions that are in https://my-json-server.typicode.com/
-
-- The project also uses the ViaCEP API to get the address more dynamically.
-
-You can find out more about at https://viacep.com.br/
 
 ## Features
 
