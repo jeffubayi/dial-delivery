@@ -1,31 +1,20 @@
-# RDelivery
+# Dial-Delivery
 
 A delivery website created with ReactJS for online ordering.
 
-## Demo
-
-View project in production: https://danielmafra.github.io/rdelivery/
-
-#### Desktop demo:
-
-![RDelivery](https://i.imgur.com/LOGjGji.gif)
-
-#### Smartphone demo:
-
-![RDelivery](https://i.imgur.com/BLBDuYr.gif)
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/DanielMafra/RDelivery-frontend-ReactJS.git
+  git clone https://github.com/jeffubayi/dial-delivery
 ```
 
 Go to the project directory
 
 ```bash
-  cd RDelivery-frontend-ReactJS
+  cd dial-delivery
 ```
 
 Install dependencies
@@ -73,6 +62,3 @@ You can find out more about at https://viacep.com.br/
 - Save the address used in localStorage
 - Use the address in localStorage as default
 
-## Authors
-
-This project was coded by [@danielmafra](https://www.github.com/danielmafra) using a UI Design created by [@isadorastan](https://github.com/isadorastan). 
