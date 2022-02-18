@@ -1,45 +1,78 @@
-# Next.js with TypeScript example
+# RDelivery
 
-## How to use
+A delivery website created with ReactJS for online ordering.
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+## Demo
 
-<!-- #default-branch-switch -->
+View project in production: https://danielmafra.github.io/rdelivery/
 
-```sh
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs-with-typescript
-cd nextjs-with-typescript
+#### Desktop demo:
+
+![RDelivery](https://i.imgur.com/LOGjGji.gif)
+
+#### Smartphone demo:
+
+![RDelivery](https://i.imgur.com/BLBDuYr.gif)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/DanielMafra/RDelivery-frontend-ReactJS.git
 ```
 
-Install it and run:
+Go to the project directory
 
-```sh
-npm install
-npm run dev
+```bash
+  cd RDelivery-frontend-ReactJS
 ```
 
-or:
+Install dependencies
 
-<!-- #default-branch-switch -->
+```bash
+  yarn install
+```
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/nextjs-with-typescript)
+Start the server
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/nextjs-with-typescript)
+```bash
+  yarn start
+```
 
-## The idea behind the example
+## Deployment
 
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including `emotion`, the default style engine in MUI v5. If you prefer, you can [use styled-components instead](https://mui.com/guides/interoperability/#styled-components).
+To deploy this project run
 
-## The link component
+```bash
+  yarn build
+```
 
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with MUI.
-More information [in the documentation](https://mui.com/guides/routing/#next-js).
+## API
 
-## What's next?
+- This project uses a fake My JSON Server API for list products.
 
-<!-- #default-branch-switch -->
+If you want to register your own products, just clone this repository, modify and upload it to GitHub: https://github.com/DanielMafra/api.git
 
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://mui.com/getting-started/templates/) section.
+After that, just follow the instructions that are in https://my-json-server.typicode.com/
+
+- The project also uses the ViaCEP API to get the address more dynamically.
+
+You can find out more about at https://viacep.com.br/
+
+## Features
+
+- Consume data through API
+- Breakpoints for Desktop and Smartphone
+- Increment and decrement products in the cart
+- Add note to product
+- Form data validation
+- ContextAPI and custom Hooks
+- Phone field mask
+- Get address via API through zip code
+- Save the address used in localStorage
+- Use the address in localStorage as default
+
+## Authors
+
+This project was coded by [@danielmafra](https://www.github.com/danielmafra) using a UI Design created by [@isadorastan](https://github.com/isadorastan). 
