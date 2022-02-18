@@ -2,6 +2,8 @@
 
 A delivery website created with ReactJS for online ordering.
 
+<img width="1440" alt="Screenshot 2022-02-18 at 17 39 56" src="https://user-images.githubusercontent.com/47192245/154703690-60f0bc8e-ad54-410b-8628-2275fc1a916a.png">
+
 
 ## Run Locally
 
