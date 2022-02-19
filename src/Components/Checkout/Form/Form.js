@@ -27,7 +27,7 @@ const Form = () => {
         navigate('/completed');
         console.log(order);
       } else if (typeBuy !== '' && typeBuy === 'delivery' && address !== null) {
-        if (number !== '' && complement !== '' && typePayment !== '') {
+        if ( typePayment !== '') {
           setOrder({
             name: name.value,
             phone: phone.value,
