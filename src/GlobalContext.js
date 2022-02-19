@@ -62,23 +62,27 @@ export const GlobalStorage = ({ children }) => {
     setData(json);
   }
 
-  async function getCep(cep) {
-    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const json = await response.json();
-    setAddress({
-      rua: json.logradouro,
-      cidade: json.localidade,
-      bairro: json.bairro,
-      uf: json.uf,
-      cep: json.cep
-    });
-  }
+  // async function getCep(cep) {
+  //   const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+  //   const json = await response.json();
+  //   setAddress({
+  //     rua: json.logradouro,
+  //     cidade: json.localidade,
+  //     bairro: json.bairro,
+  //     uf: json.uf,
+  //     cep: json.cep
+  //   });
+  // }
 
-  // wait for the CEP to be filled in with 8 digits to make the request
+  // // wait for the CEP to be filled in with 8 digits to make the request
   React.useEffect(() => {
-    if (cep.length >= 8) {
-      getCep(cep);
-    }
+    setAddress({
+          rua: "2332",
+          cidade: "2323",
+          bairro:"32323",
+          uf: "23233",
+          cep: cep
+        });
   }, [cep])
 
   // watch the cart changes to calculate the total price.
