@@ -8,7 +8,7 @@ const Address = () => {
   const [error, setError] = React.useState(false);
 
   function validateCep() {
-    if (cep.length < 8) {
+    if (cep.length < 3) {
       setError(true);
     } else {
       setError(false);
@@ -23,7 +23,7 @@ const Address = () => {
       {address && (
         <>
           <div className={styles.address}>
-          <p>Store  to   ${cep}</p>
+          <p>Origin: Store </p>  <span>Destination:  {cep}</span>
           </div>
           <label htmlFor="number" className={styles.label}>Number</label>
           <input id="number" name="number" placeholder="Enter nearest building,street,floor,room number" className={styles.input} type="number" onChange={(event) => setNumber(event.target.value)} value={number} />
