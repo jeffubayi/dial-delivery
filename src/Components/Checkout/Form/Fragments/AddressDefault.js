@@ -14,7 +14,7 @@ const AddressDefault = () => {
     <div>
       <p className={styles.defaultAddress}>Default address:</p>
       <div className={styles.cardAddress}>
-        <p>{user.cep}, {user.number}</p>
+        <p>{user.cep}</p>
         <p>{user.complement}</p>
         <button className={styles.editAddress} onClick={handleAddress}>Edit address</button>
       </div>
