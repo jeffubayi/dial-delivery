@@ -11,23 +11,58 @@ const HomeNav = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <NavLink to="/Pizza" activeClassName={styles.active}>
+        <NavLink
+          to="/Pizza"
+          style={({ isActive }) => ({
+            backgroundColor: !isActive ? "#fff" : " #fdc844",
+            borderRadius: !isActive ? "0" : "8px",
+            color: !isActive ? "#848484" : "#000",
+          })}
+        >
           <PizzaIcon />
           Pizza
         </NavLink>
-        <NavLink to="/Bebidas" activeClassName={styles.active}>
+        <NavLink
+          to="/Bebidas"
+          style={({ isActive }) => ({
+            backgroundColor: !isActive ? "#fff" : " #fdc844",
+            borderRadius: !isActive ? "0" : "8px",
+            color: !isActive ? "#848484" : "#000",
+          })}
+        >
           <DrinksIcon />
           Drinks
         </NavLink>
-        <NavLink to="/Sobremesas" activeClassName={styles.active}>
+        <NavLink
+          to="/Sobremesas"
+          style={({ isActive }) => ({
+            backgroundColor: !isActive ? "#fff" : " #fdc844",
+            borderRadius: !isActive ? "0" : "8px",
+            color: !isActive ? "#848484" : "#000",
+          })}
+        >
           <DessertsIcon />
           Ice Cream
         </NavLink>
-        <NavLink to="/Combos" activeClassName={styles.active}>
+        <NavLink
+          to="/Combos"
+          style={({ isActive }) => ({
+            backgroundColor: !isActive ? "#fff" : " #fdc844",
+            borderRadius: !isActive ? "0" : "8px",
+            color: !isActive ? "#848484" : "#000",
+          })}
+        >
           <CombosIcon />
           Fries
         </NavLink>
-        <NavLink to="/Burguers" activeClassName={styles.active}>
+        <NavLink
+          to="/Burguers"
+          style={({ isActive }) => ({
+            backgroundColor: !isActive ? "#fff" : " #fdc844",
+            borderRadius: !isActive ? "0" : "8px",
+            color: !isActive ? "#848484" : "#000",
+          })}
+        >
           <BurguersIcon />
           Burgers
         </NavLink>

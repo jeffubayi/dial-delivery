@@ -18,6 +18,30 @@
   color: #008000;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn button {
+  background-color: #ff2351;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  width: 397px;
+  height: 51px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn button:hover {
+  background-color: rgb(255, 35, 51);
+  transform: scale(1.01);
+}
+
 ion-icon {
   font-size: 24px;
   color: #008000;
