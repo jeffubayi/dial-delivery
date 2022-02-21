@@ -7,9 +7,23 @@
   margin-right: 12px;
 }
 
+.bgImage {
+  background-color: rgba(68, 253, 130, 0.3);
+  border-radius: 8px;
+  width: 80px;
+  margin-left: 26px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
 .label {
   color: #848484;
   font-size: 16px;
+}
+
+.text{
+  color: #848484;
+  font-size: 12px;
 }
 
 .label:nth-child(2){
