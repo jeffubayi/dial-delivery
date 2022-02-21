@@ -24,11 +24,11 @@ const Address = () => {
         <>
           <div className={styles.address}>
           <p>Origin: Store </p>  <span>Destination:  {cep}</span>
-          </div>
-          <label htmlFor="number" className={styles.label}>Number</label>
-          <input id="number" name="number" placeholder="Enter nearest building,street,floor,room number" className={styles.input} type="number" onChange={(event) => setNumber(event.target.value)} value={number} />
-          <label htmlFor="complement" className={styles.complement}>Additional information</label>
-          <input id="complement" name="complement" placeholder="Enter a compliment" className={styles.input} type="text" onChange={(event) => setComplement(event.target.value)} value={complement} />
+          </div> <label htmlFor="complement" className={styles.complement}>Nearest landmark </label>
+          <input id="complement" name="complement" placeholder="Enter nearest building,school or organisation" className={styles.input} type="text" onChange={(event) => setComplement(event.target.value)} value={complement} />
+          <label htmlFor="number" className={styles.label}>Door Number</label>
+          <input id="number" name="number" placeholder="Enter exact floor,room or door number" className={styles.input} type="number" onChange={(event) => setNumber(event.target.value)} value={number} />
+         
           <h3 className={styles.subTitle}>Payment</h3>
           <p className={styles.typePay}>Payment Method:</p>
           <RadioPayment />
