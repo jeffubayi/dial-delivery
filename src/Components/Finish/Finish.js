@@ -1,10 +1,16 @@
-import React from 'react';
-import { GlobalContext } from '../../GlobalContext';
-import styles from './Finish.module.css';
-import CartItem from '../Home/Cart/CartItem';
+import React from "react";
+import { GlobalContext } from "../../GlobalContext";
+import styles from "./Finish.module.css";
+import CartItem from "../Home/Cart/CartItem";
+import { useNavigate } from "react-router-dom";
 
 const Finish = () => {
+  const navigate = useNavigate();
   const { cart, total, typeBuy } = React.useContext(GlobalContext);
+  const finishOrder = () => {
+    navigate("/");
+    window.location.reload();
+  };
 
   return (
     <div className={styles.finishContainer}>
@@ -14,7 +20,9 @@ const Finish = () => {
       </div>
       <div className={styles.orderContainer}>
         <div className={styles.orderItems}>
-          {cart.map((item) => <CartItem key={item.id} product={item} isFinish={true} />)}
+          {cart.map((item) => (
+            <CartItem key={item.id} product={item} isFinish={true} />
+          ))}
         </div>
         <div className={styles.total}>
           <h4>Total</h4>
@@ -22,13 +30,19 @@ const Finish = () => {
         </div>
       </div>
       {typeBuy === "delivery" ? (
-        <p className={styles.orderStore}>Your order will be delivered within 60 minutes.</p>
+        <p className={styles.orderStore}>
+          Your order will be delivered within 60 minutes.
+        </p>
       ) : (
         <p className={styles.orderStore}>
-        In 25 minutes your order will be ready to be picked up in our store.</p>
+          In 25 minutes your order will be ready to be picked up in our store.
+        </p>
       )}
+      <div className={styles.btn}>
+        <button onClick={finishOrder}>Finish</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Finish;
