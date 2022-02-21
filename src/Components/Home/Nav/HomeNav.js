@@ -16,7 +16,7 @@ const HomeNav = () => {
           style={({ isActive }) => ({
             backgroundColor: !isActive ? "#fff" : " #fdc844",
             borderRadius: !isActive ? "0" : "8px",
-            color: !isActive ? "#000" : "#000",
+            color: !isActive ? "#848484" : "#000",
           })}
         >
           <PizzaIcon />
@@ -27,7 +27,7 @@ const HomeNav = () => {
           style={({ isActive }) => ({
             backgroundColor: !isActive ? "#fff" : " #fdc844",
             borderRadius: !isActive ? "0" : "8px",
-            color: !isActive ? "#000" : "#000",
+            color: !isActive ? "#848484" : "#000",
           })}
         >
           <DrinksIcon />
@@ -38,7 +38,7 @@ const HomeNav = () => {
           style={({ isActive }) => ({
             backgroundColor: !isActive ? "#fff" : " #fdc844",
             borderRadius: !isActive ? "0" : "8px",
-            color: !isActive ? "#000" : "#000",
+            color: !isActive ? "#848484" : "#000",
           })}
         >
           <DessertsIcon />
@@ -49,7 +49,7 @@ const HomeNav = () => {
           style={({ isActive }) => ({
             backgroundColor: !isActive ? "#fff" : " #fdc844",
             borderRadius: !isActive ? "0" : "8px",
-            color: !isActive ? "#000" : "#000",
+            color: !isActive ? "#848484" : "#000",
           })}
         >
           <CombosIcon />
@@ -60,7 +60,7 @@ const HomeNav = () => {
           style={({ isActive }) => ({
             backgroundColor: !isActive ? "#fff" : " #fdc844",
             borderRadius: !isActive ? "0" : "8px",
-            color: !isActive ? "#000" : "#000",
+            color: !isActive ? "#848484" : "#000",
           })}
         >
           <BurguersIcon />
