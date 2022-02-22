@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import OrderProgress from './Components/Home/Track';
+import OrderProgress from './Components/Finish/Track';
 import Checkout from './Components/Checkout/Checkout';
 import Finish from './Components/Finish/Finish';
 import { GlobalStorage } from './GlobalContext';
