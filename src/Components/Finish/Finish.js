@@ -8,7 +8,7 @@ const Finish = () => {
   const navigate = useNavigate();
   const { cart, total, typeBuy } = React.useContext(GlobalContext);
   const finishOrder = () => {
-    navigate("/");
+    navigate("/order-progress");
     window.location.reload();
   };
 
@@ -39,7 +39,7 @@ const Finish = () => {
         </p>
       )}
       <div className={styles.btn}>
-        <button onClick={finishOrder}>Finish</button>
+        <button onClick={finishOrder}>View Progress</button>
       </div>
     </div>
   );
