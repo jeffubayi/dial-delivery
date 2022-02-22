@@ -9,7 +9,6 @@ const Finish = () => {
   const { cart, total, typeBuy } = React.useContext(GlobalContext);
   const finishOrder = () => {
     navigate("/order-progress");
-    window.location.reload();
   };
 
   return (
