@@ -54,11 +54,14 @@ const Track = () => {
           ))}
         </div>
         <div className={styles.total}>
+          <div>
           <h4> Your order will be ready in</h4>
-          <h4 className={styles.price}>
-            {" "}
+          </div>
+          <div className={styles.circle}>
+          <h4 className={styles.time}>
             {timerMinutes}:{timerSeconds}
           </h4>
+          </div>
         </div>
       </div>
       <p className={styles.orderStore}>Delivery charge, Ksh {total}.</p>
