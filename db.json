@@ -1,6 +1,6 @@
 {
   "pizzas": [
-  {
+      {
       "id": "1",
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
       "name": "Pepperoni Fresh with pepper",
@@ -66,6 +66,30 @@
       "rating": 4,
       "delivery": false
     },
+    {
+      "id": "2",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
+      "name": "cheese",
+      "desc": "Enlarged natural milk mozzarella, tomatoes, Italian herbs, tomato sauce",
+      "sizes": [
+        {
+          "id": "1",
+          "size": 25,
+          "price": 250,
+          "weight": 440,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": false
+            }
+          ]
+        },
         {
           "id": "2",
           "size": 30,
@@ -173,8 +197,75 @@
       "category": "grill",
       "rating": 4,
       "delivery": false
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
+      "name": "Sweet and sour chicken",
+      "desc": "Chicken ham, pineapples, natural milk mozzarella, tomato sauce",
+      "sizes": [
+        {
+          "id": "1",
+          "size": 25,
+          "price": 580,
+          "weight": 480,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": false
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "size": 30,
+          "price": 660,
+          "weight": 710,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "size": 35,
+          "price": 730,
+          "weight": 960,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        }
+      ],
+      "price": 660,
+      "category": "grill",
+      "rating": 2,
+      "delivery": true
     }
-  ]}
+  ]
+}
     
   
 
