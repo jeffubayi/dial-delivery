@@ -595,6 +595,23 @@
       "delivery": true
     }
   ]
+  ,
+  "category": [
+    { "id": 1, "name": "All", "type": "all" },
+    { "id": 2, "name": "Мeat", "type": "meat" },
+    { "id": 3, "name": "Vegetarian", "type": "vegetarian" },
+    { "id": 4, "name": "Grilled", "type": "grill" },
+    { "id": 5, "name": "Spicy", "type": "spicy" },
+    { "id": 6, "name": "Pepperoni", "type": "occluded" }
+  ],
+  "sort": [
+    { "name": "popularity (DESC)", "type": "rating", "order": "desc" },
+    { "name": "popularity (ASC)", "type": "-rating", "order": "asc" },
+    { "name": "prices (DESC)", "type": "price", "order": "desc" },
+    { "name": "prices (ASC)", "type": "-price", "order": "asc" },
+    { "name": "name (DESC)", "type": "name", "order": "desc" },
+    { "name": "name (ASC)", "type": "-name", "order": "asc" }
+  ]
 }
     
   
