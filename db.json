@@ -65,6 +65,114 @@
       "category": "spicy",
       "rating": 4,
       "delivery": false
+    },
+        {
+          "id": "2",
+          "size": 30,
+          "price": 340,
+          "weight": 650,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "size": 35,
+          "price": 450,
+          "weight": 870,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        }
+      ],
+      "price": 340,
+      "category": "vegetarian",
+      "rating": 6,
+      "delivery": true
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
+      "name": "barbecue chicken",
+      "desc": "Turkey, champignons, increased portion of natural milk mozzarella, tomato sauce",
+      "sizes": [
+        {
+          "id": "1",
+          "size": 25,
+          "price": 470,
+          "weight": 460,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": false
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "size": 30,
+          "price": 560,
+          "weight": 670,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "size": 35,
+          "price": 770,
+          "weight": 870,
+          "type": [
+            {
+              "id": "1",
+              "typeName": "Traditional",
+              "isShow": true
+            },
+            {
+              "id": "2",
+              "typeName": "Thin",
+              "isShow": true
+            }
+          ]
+        }
+      ],
+      "price": 560,
+      "category": "grill",
+      "rating": 4,
+      "delivery": false
     }
   ]}
     
